@@ -25,12 +25,12 @@ const NavBar = () => {
         </li>
 
         <li>
-          <Link href="/about" aria-label="About">
+          <Link href="/#about" aria-label="About">
             About
           </Link>
         </li>
                 <li>
-          <Link href="/contact" aria-label="Contact">
+          <Link href="/#contact" aria-label="Contact">
             Contact
           </Link>
         </li>
