@@ -1,9 +1,16 @@
+import About from "@/components/sections/About";
+import CaseStudies from "@/components/sections/CaseStudies";
+import HeroBanner from "@/components/sections/HeroBanner";
+import Services from "@/components/sections/Services";
 import Link from "next/link";
 
 export default function Home() {
   return (
-   <div className="flex-1 flex items-center justify-center">
-     <h1 className="text-4xl font-bold">Welcome to the Home Page</h1>
-   </div>
+    <div>
+      <HeroBanner />
+      <Services />
+      <CaseStudies />
+      <About />
+    </div>
   );
 }
