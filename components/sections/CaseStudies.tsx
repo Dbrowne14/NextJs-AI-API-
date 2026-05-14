@@ -1,6 +1,8 @@
 import React from "react";
+import Link from "next/link";
+import { caseStudies } from "@/lib/case-studies";
 
-const CaseStudies = () => {
+export const CaseStudies = () => {
   return (
     <div
       id="case-studies"
@@ -14,13 +16,14 @@ const CaseStudies = () => {
         </p>
       </div>
       <div className="flex flex-row w-full">
-        {Array.from({ length: 3 }, (_, i) => (
-          <div
+        {caseStudies.map((slug, i) => (
+          <Link
             key={i}
+            href={`/case-studies/${slug.slug}`}
             className="bg-gray-700 py-8 px-4 m-2 rounded-lg h-100 w-[33%]"
           >
-            <h3 className="text-xl font-bold">Case Study {i + 1}</h3>
-          </div>
+            <h3 className="text-xl font-bold">{slug.title}</h3>
+          </Link>
         ))}
       </div>
     </div>
